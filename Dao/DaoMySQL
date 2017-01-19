@@ -27,6 +27,10 @@ public class DaoMySQL {
 
 	public static void main(String[] args) {
 		
+		connection();
+	}
+
+	private static void connection() {
 		try {
 			DaoMySQL dao = new DaoMySQL();
 			dao.open();

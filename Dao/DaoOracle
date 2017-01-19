@@ -27,11 +27,15 @@ public class DaoOracle {
 
 	public static void main(String[] args) {
 		
+		connection();
+	}
+
+	private static void connection() {
 		try {
 			DaoOracle dao = new DaoOracle();
 			dao.open();
 			dao.close();
-			System.out.println("OracleXE -> Connect!");
+			System.out.println("Oracle -> Connect!");
 			
 		} catch (Exception e) {
 			System.out.println("Connect Fail ... " + e.getMessage());

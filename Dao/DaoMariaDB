@@ -13,7 +13,7 @@ public class DaoMariaDB {
 	
 	private final String URL = "jdbc:mysql://localhost:3306/dbzone";
 	private final String USER = "root";
-	private final String PASS = "p4sS";
+	private final String PASS = "maria";
 	
 	protected void open()throws Exception{
 		Class.forName("org.mariadb.jdbc.Driver");
@@ -27,6 +27,10 @@ public class DaoMariaDB {
 
 	public static void main(String[] args) {
 		
+		connection();
+	}
+
+	private static void connection() {
 		try {
 			DaoMariaDB dao = new DaoMariaDB();
 			dao.open();
